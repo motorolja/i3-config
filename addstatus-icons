@@ -1,0 +1,17 @@
+#!/bin/bash
+
+sleep 1
+if [ ! "`ps -A | grep nm-applet`"]; then
+    exec nm-applet &
+fi
+
+if [ ! "`ps -A | grep owncloud`"]; then
+    exec owncloud &
+fi
+
+#if [ ! "`ps -A | grep blueberry-tray`"]; then
+#    exec blueberry-tray &
+#fi
+
+
+exit 0
